@@ -27,3 +27,4 @@ CI runs the same test, `astro check`, and build on pull requests. A GitHub Pages
 - The wordmark is typeset `SOL FOUR` in Outfit Bold. The studio name is not locked, and there is no drawn wordmark yet.
 - The tagline “Four games on Mars.” is a placeholder until Andreas picks one.
 - Every game card links to its planned `*.solfour.app` host. DNS for those subdomains is Andreas’s.
+- The About section names Andreas and links to [github.com/anoff](https://github.com/anoff).

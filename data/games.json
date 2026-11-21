@@ -4,7 +4,13 @@
     "wordmark": "SOL FOUR",
     "tagline": "Four games on Mars.",
     "taglineStatus": "placeholder — Andreas to pick",
-    "url": "https://solfour.app"
+    "url": "https://solfour.app",
+    "intro": "Four browser games, each with its own style, under one studio. All of them are set on Mars, and all of them play in the browser.",
+    "authorName": "Andreas",
+    "authorUrl": "https://github.com/anoff",
+    "about": "Sol Four is Andreas's studio for browser games on Mars. He builds them as a solo developer. The four games share a home and a mark; each one keeps its own look.",
+    "sourceLabel": "Source on GitHub",
+    "sourceUrl": "https://github.com/anoff/solfour"
   },
   "games": [
     {
@@ -13,7 +19,13 @@
       "signature": "#FF7A3D",
       "url": "https://areoid.solfour.app",
       "urlStatus": "live",
-      "notes": "Planned CI host. DNS for the subdomain is Andreas's."
+      "pitch": "Seal a region of Mars, grow the bloom inside, and open the sky.",
+      "genre": "Terraforming simulator",
+      "platform": "Phone, tablet and desktop",
+      "controls": "Drag and pinch the globe; tap a region to work it. Pause, or run time at 1×, 2× or 3×.",
+      "session": "A mission takes 8–10 minutes.",
+      "playLabel": "Play in browser",
+      "statusLabel": "Live"
     },
     {
       "slug": "prospectors",
@@ -21,7 +33,12 @@
       "signature": "#4FD6E6",
       "url": "https://prospectors.solfour.app",
       "urlStatus": "live",
-      "notes": "Planned CI host. DNS for the subdomain is Andreas's."
+      "pitch": "Claim ore fields from your Hab, fly the haul home, and defend the network.",
+      "genre": "Mining and tower defence",
+      "platform": "Phone first, also desktop",
+      "controls": "Drag to move, or use WASD or the arrow keys. The hero attacks on its own. Build from the bar at the bottom.",
+      "playLabel": "Play in browser",
+      "statusLabel": "Live"
     },
     {
       "slug": "domes",
@@ -29,7 +46,12 @@
       "signature": "#35B8A8",
       "url": "https://domes.solfour.app",
       "urlStatus": "live",
-      "notes": "Planned CI host. DNS for the subdomain is Andreas's."
+      "pitch": "Lay roads, watch every ware carried by hand, and grow a chain of domes.",
+      "genre": "Cosy economy builder",
+      "platform": "Phone and desktop",
+      "controls": "Drag to pan, pinch or scroll to zoom. Tap the ground to build, tap a flag to lay a road.",
+      "playLabel": "Play in browser",
+      "statusLabel": "Live"
     },
     {
       "slug": "tharsis",
@@ -37,7 +59,13 @@
       "signature": "#4B3F6B",
       "url": "https://tharsis.solfour.app",
       "urlStatus": "live",
-      "notes": "Planned CI host. DNS for the subdomain is Andreas's."
+      "pitch": "Pick a site on the globe and drive, walk or fly across real Mars.",
+      "genre": "Mars exploration sim",
+      "platform": "Phone, tablet and desktop",
+      "controls": "WASD or arrows to drive or walk, mouse to look. On a phone, a stick on the left and drag to look.",
+      "session": "Open-ended; you go as far as you like.",
+      "playLabel": "Play in browser",
+      "statusLabel": "Live"
     }
   ]
 }

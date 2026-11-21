@@ -6,6 +6,12 @@ export type Studio = {
   tagline: string;
   taglineStatus: string;
   url: string;
+  intro: string;
+  authorName: string;
+  authorUrl: string;
+  about: string;
+  sourceLabel: string;
+  sourceUrl: string;
 };
 
 export type Game = {
@@ -14,7 +20,13 @@ export type Game = {
   signature: string;
   url: string;
   urlStatus: string;
-  notes?: string;
+  pitch: string;
+  genre: string;
+  platform: string;
+  controls: string;
+  session?: string;
+  playLabel: string;
+  statusLabel: string;
 };
 
 export const studio: Studio = source.studio;

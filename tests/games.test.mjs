@@ -11,6 +11,13 @@ const css = readFileSync(join(root, 'src/styles/global.css'), 'utf8');
 const cardSource = readFileSync(join(root, 'src/components/GameCard.astro'), 'utf8');
 const hex = /^#[0-9A-Fa-f]{6}$/;
 
+const expectedGenres = {
+  areoid: 'Terraforming simulator',
+  prospectors: 'Mining and tower defence',
+  domes: 'Cosy economy builder',
+  tharsis: 'Mars exploration sim',
+};
+
 test('games.json has studio fields and four games', () => {
   assert.equal(typeof data.studio.name, 'string');
   assert.equal(data.studio.wordmark, 'SOL FOUR');
@@ -28,6 +35,7 @@ test('every game is a playable card on an https://*.solfour.app host', () => {
     assert.ok(hex.test(game.signature), `${game.slug} signature`);
     assert.equal(typeof game.url, 'string', `${game.slug} url`);
     assert.equal(game.urlStatus, 'live', `${game.slug} urlStatus`);
+    assert.equal(game.statusLabel, 'Live', `${game.slug} statusLabel`);
     const url = new URL(game.url);
     assert.equal(url.protocol, 'https:');
     assert.equal(url.hostname, `${game.slug}.solfour.app`);
@@ -35,10 +43,23 @@ test('every game is a playable card on an https://*.solfour.app host', () => {
   }
 });
 
+test('every game has the exact genre from the art direction', () => {
+  const seen = new Set();
+  for (const game of data.games) {
+    assert.equal(typeof game.genre, 'string', `${game.slug} genre type`);
+    assert.ok(game.genre.trim().length > 0, `${game.slug} genre is empty`);
+    assert.equal(game.genre, expectedGenres[game.slug], `${game.slug} genre`);
+    seen.add(game.slug);
+  }
+  assert.deepEqual([...seen].sort(), Object.keys(expectedGenres).sort());
+  assert.equal(data.games.find((game) => game.slug === 'tharsis').name, 'Tharsis');
+});
+
 test('no card is coming soon', () => {
   for (const game of data.games) {
     assert.notEqual(game.url, null, `${game.slug} url`);
     assert.notEqual(game.urlStatus, 'TODO', `${game.slug} urlStatus`);
+    assert.notEqual(game.statusLabel, 'Coming soon', `${game.slug} statusLabel`);
   }
   assert.doesNotMatch(cardSource, /coming soon/i);
 });
