@@ -2,7 +2,7 @@
 
 Studio landing page for [solfour.app](https://solfour.app).
 
-A static [Astro](https://astro.build) + [Tailwind](https://tailwindcss.com) site. Game cards render from `data/games.json`. The studio mark is overlaid in markup from `public/favicon.svg` and is not baked into the card or OG art.
+A static [Astro](https://astro.build) + [Tailwind](https://tailwindcss.com) site. Game cards render from `data/games.json`. The studio mark appears in the hero (and as the favicon) via `public/favicon.svg`; it is not baked into the card or OG art, and it is not overlaid on the game cards.
 
 ## Develop
 

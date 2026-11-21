@@ -15,24 +15,14 @@ const cardSrc = `/games/${game.slug}/card-512.webp`;
   rel="noopener noreferrer"
   class="group flex flex-col gap-3 rounded-sm outline-none focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
 >
-  <div class="relative aspect-square w-full">
-    <img
-      src={cardSrc}
-      alt=""
-      width="512"
-      height="512"
-      class="block h-auto w-full"
-      decoding="async"
-    />
-    <img
-      src="/favicon.svg"
-      alt=""
-      width="32"
-      height="32"
-      class="pointer-events-none absolute bottom-[8%] right-[8%] h-[12%] w-[12%]"
-      aria-hidden="true"
-    />
-  </div>
+  <img
+    src={cardSrc}
+    alt=""
+    width="512"
+    height="512"
+    class="aspect-square h-auto w-full"
+    decoding="async"
+  />
   <div class="flex min-h-11 flex-col justify-center px-0.5">
     <p class="font-semibold tracking-wide">
       <span
