@@ -1,0 +1,56 @@
+---
+import type { Game } from '../data/games';
+
+interface Props {
+  game: Game;
+}
+
+const { game } = Astro.props;
+const href = game.url;
+const isLive = typeof href === 'string' && href.length > 0;
+const cardSrc = `/games/${game.slug}/card-512.webp`;
+const Tag = isLive ? 'a' : 'div';
+const linkProps = isLive
+  ? { href, target: '_blank', rel: 'noopener noreferrer' }
+  : {};
+---
+
+<Tag
+  class:list={[
+    'group flex flex-col gap-3 rounded-sm outline-none',
+    'focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink',
+  ]}
+  {...linkProps}
+>
+  <div class="relative aspect-square w-full">
+    <img
+      src={cardSrc}
+      alt=""
+      width="512"
+      height="512"
+      class="block h-auto w-full"
+      decoding="async"
+    />
+    <img
+      src="/favicon.svg"
+      alt=""
+      width="32"
+      height="32"
+      class="pointer-events-none absolute bottom-[8%] right-[8%] h-[12%] w-[12%]"
+      aria-hidden="true"
+    />
+  </div>
+  <div class="flex min-h-11 flex-col justify-center px-0.5">
+    <p class="font-semibold tracking-wide">
+      <span
+        class="underline decoration-2 underline-offset-4"
+        style={`text-decoration-color: ${game.signature}`}>{game.name}</span
+      >
+    </p>
+    {
+      !isLive && (
+        <p class="mt-1 text-sm text-muted">Coming soon</p>
+      )
+    }
+  </div>
+</Tag>
