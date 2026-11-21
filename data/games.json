@@ -11,33 +11,33 @@
       "slug": "areoid",
       "name": "Areoid",
       "signature": "#FF7A3D",
-      "url": "https://areoid.anoff.io",
+      "url": "https://areoid.solfour.app",
       "urlStatus": "live",
-      "notes": "Andreas confirmed 2026-11-21: treat as a playable card with this live link. The pack still notes HTTP Basic 401 on this host; planned areoid.solfour.app is not live."
+      "notes": "Planned CI host. DNS for the subdomain is Andreas's."
     },
     {
       "slug": "prospectors",
       "name": "Red Dust Prospectors",
       "signature": "#4FD6E6",
-      "url": "https://prospectors.anoff.io/",
+      "url": "https://prospectors.solfour.app",
       "urlStatus": "live",
-      "notes": "Documented in anoff/red-dust README; custom-domain GitHub Pages. HTTP 200."
+      "notes": "Planned CI host. DNS for the subdomain is Andreas's."
     },
     {
       "slug": "domes",
       "name": "Dust & Domes",
       "signature": "#35B8A8",
-      "url": "https://anoff.github.io/dust-and-domes/",
+      "url": "https://domes.solfour.app",
       "urlStatus": "live",
-      "notes": "GitHub repo homepage and Pages workflow on main. HTTP 200. CI planned host domes.solfour.app is not live."
+      "notes": "Planned CI host. DNS for the subdomain is Andreas's."
     },
     {
       "slug": "tharsis",
       "name": "Tharsis",
       "signature": "#4B3F6B",
-      "url": null,
-      "urlStatus": "TODO",
-      "notes": "TODO: no live URL in the art repo pack (rg found only the planned host tharsis.solfour.app, which is not live and must not be used). Andreas said Tharsis is live; confirm the href before linking. Do not invent a host."
+      "url": "https://tharsis.solfour.app",
+      "urlStatus": "live",
+      "notes": "Planned CI host. DNS for the subdomain is Andreas's."
     }
   ]
 }

@@ -12,7 +12,7 @@ export type Game = {
   slug: string;
   name: string;
   signature: string;
-  url: string | null;
+  url: string;
   urlStatus: string;
   notes?: string;
 };

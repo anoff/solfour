@@ -6,21 +6,14 @@ interface Props {
 }
 
 const { game } = Astro.props;
-const href = game.url;
-const isLive = typeof href === 'string' && href.length > 0;
 const cardSrc = `/games/${game.slug}/card-512.webp`;
-const Tag = isLive ? 'a' : 'div';
-const linkProps = isLive
-  ? { href, target: '_blank', rel: 'noopener noreferrer' }
-  : {};
 ---
 
-<Tag
-  class:list={[
-    'group flex flex-col gap-3 rounded-sm outline-none',
-    'focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink',
-  ]}
-  {...linkProps}
+<a
+  href={game.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="group flex flex-col gap-3 rounded-sm outline-none focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
 >
   <div class="relative aspect-square w-full">
     <img
@@ -47,10 +40,5 @@ const linkProps = isLive
         style={`text-decoration-color: ${game.signature}`}>{game.name}</span
       >
     </p>
-    {
-      !isLive && (
-        <p class="mt-1 text-sm text-muted">Coming soon</p>
-      )
-    }
   </div>
-</Tag>
+</a>
