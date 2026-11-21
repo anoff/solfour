@@ -1,0 +1,28 @@
+---
+---
+
+<button
+  type="button"
+  id="play-sting"
+  class="inline-flex min-h-11 items-center rounded-sm text-sm text-muted outline-none hover:text-ink focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+>
+  Play sting
+</button>
+
+<script>
+  const button = document.getElementById('play-sting');
+  if (button) {
+    let audio: HTMLAudioElement | undefined;
+    button.addEventListener('click', () => {
+      if (!audio) {
+        audio = new Audio();
+        audio.preload = 'auto';
+        audio.src = audio.canPlayType('audio/ogg; codecs="vorbis"')
+          ? '/audio/solfour-sting.ogg'
+          : '/audio/solfour-sting.mp3';
+      }
+      audio.currentTime = 0;
+      void audio.play();
+    });
+  }
+</script>

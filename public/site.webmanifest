@@ -1,0 +1,22 @@
+{
+  "name": "Sol Four",
+  "short_name": "Sol Four",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#EFE6D2",
+  "theme_color": "#EFE6D2",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ]
+}
